@@ -1,12 +1,11 @@
 <template>
-  <div id="app">
-  </div>
+  <div></div>
 </template>
 
 <script>
-export default {
+module.exports = {
 }
 </script>
 
-<style>
+<style scoped>
 </style>
