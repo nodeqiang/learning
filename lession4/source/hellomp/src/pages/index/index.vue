@@ -2,20 +2,25 @@
   <div class="page">
     <div class="row">
       <input v-model="source" />
-      <button @click="result=sqrt(source)">确定</button>
+      <button @click="calc">确定</button>
     </div>
     <div class="result"> {{ result }} </div>
   </div>
 </template>
 
 <script>
+let 平方根 = require('sqrt2')
 module.exports = {
-  data: () => ({
-    source: 2,
-    result: ''
-  }),
+  data () {
+    return {
+      source: 2,
+      result: 1.414
+    }
+  },
   methods: {
-    sqrt: require('sqrt2')
+    calc () {
+      this.result = 平方根(this.source)
+    }
   }
 }
 </script>
